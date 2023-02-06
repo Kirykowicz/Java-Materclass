@@ -2,21 +2,23 @@ public class LeapYear {
     public static void main(String[] args) {
         System.out.println(isLeapYear(1600));
     }
-    public static boolean isLeapYear(int year){
-        if(year < 1 || year > 9999){
+
+    public static boolean isLeapYear(int year) {
+        if (year < 1 || year > 9999) {
             return false;
-        } else if (year % 4 == 0){
-            if(year %  100 == 0){
-                if(year % 400 == 0){
+        } else if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
                     return true;
-                }else{
+                } else {
                     return false;
                 }
-            }else{
+            } else {
                 return true;
             }
-        }else{
+        } else {
             return false;
         }
     }
 }
+
