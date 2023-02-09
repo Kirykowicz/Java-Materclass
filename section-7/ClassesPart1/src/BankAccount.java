@@ -6,6 +6,18 @@ public class BankAccount {
     private String email;
     private String phoneNumber;
 
+    public BankAccount(){
+        this(000000, 0.0, "Default Customer", "example@ex.com", "xxx-xxx-xxxx");
+    }
+
+    public BankAccount(int accountNumber, double balance, String customerName, String email, String phoneNumber) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
     public void deposit(double depositAmount){
         this.balance += depositAmount;
     }
