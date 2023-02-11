@@ -5,7 +5,7 @@ public class ForStatementChallenge {
         for(int i = 0; i <= checkPrime; i++){
             System.out.println(i + " is " + (isPrime(i) ? "" : "NOT ") + "a prime number.");
         }
-        System.out.println(primeCounter(0, 23));
+        primeCounter(0, 23);
     }
 
     public static boolean isPrime(int wholeNumber){
@@ -29,6 +29,7 @@ public class ForStatementChallenge {
                 count++;
             }
         }
+        System.out.println("There are " + count + " prime numbers between " + start + " and " + finish);
         return count;
     }
 }
