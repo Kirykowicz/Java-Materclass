@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         int[] exampleArray = readIntegers();
         System.out.println(Arrays.toString(exampleArray));
-        reversArray(exampleArray);
+        reverseArray(exampleArray);
         System.out.println(Arrays.toString(exampleArray));
         System.out.println("The min value is: " + findMin(exampleArray));
         int[] ex = {1,2,3,4,5};
@@ -41,12 +41,23 @@ public class Main {
         return min;
     }
 
-    private static void reversArray(int[] arr){
+    private static void reverseArray(int[] arr){
         int temp;
         for (int i = 0; i < arr.length / 2; i++) {
             temp = arr[i];
             arr[i] = arr[arr.length - 1 - i];
             arr[arr.length - 1 - i] = temp;
+        }
+    }
+
+    private static void reverseArrayInstructorsSolutions(int[] array){
+        int maxIndex = array.length - 1;
+        int halfLength = array.length / 2;
+
+        for (int i = 0; i < halfLength; i++) {
+            int temp = array[i];
+            array[i] = array[maxIndex - i];
+            array[maxIndex - i] = temp;
         }
     }
 }
