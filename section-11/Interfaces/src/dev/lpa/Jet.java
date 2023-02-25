@@ -1,6 +1,8 @@
 package dev.lpa;
 
-public class Jet implements FlightEnabled{
+import java.util.Comparator;
+
+public class Jet implements FlightEnabled {
 
     @Override
     public void takeOff() {
@@ -17,5 +19,9 @@ public class Jet implements FlightEnabled{
         System.out.println(getClass().getSimpleName() + " is flying");
     }
 
-
+    @Override
+    public FlightStages transition(FlightStages stage) {
+        System.out.println(getClass().getSimpleName() + " transitioning");
+        return FlightEnabled.super.transition(stage);
+    }
 }
