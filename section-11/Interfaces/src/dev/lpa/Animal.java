@@ -1,5 +1,10 @@
 package dev.lpa;
 
+interface OrbitEarth extends FlightEnabled {
+
+    void achieveOrbit();
+}
+
 interface FlightEnabled {
 
     double MILES_TO_KM = 1.60934;
